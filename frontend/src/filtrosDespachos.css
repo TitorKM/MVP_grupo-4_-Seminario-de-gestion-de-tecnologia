@@ -1,0 +1,114 @@
+.filters.dispatch-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 12px;
+  padding: 16px;
+  margin-bottom: 14px;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+}
+
+.dispatch-filters .filter-title {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-basis: 100%;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.dispatch-filters label.dispatch-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1 1 calc(33.333% - 8px);
+  min-width: 0;
+  margin: 0;
+  color: #555b62;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.dispatch-filters .dispatch-filter select,
+.dispatch-filters .dispatch-filter input {
+  width: 100%;
+  min-width: 0;
+  min-height: 40px;
+  margin: 0;
+  padding: 9px 10px;
+  color: #1f2124;
+  background: #fff;
+  border: 1px solid #d4d6d8;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.dispatch-filters .dispatch-filter input[aria-invalid="true"] {
+  border-color: #b14a00;
+}
+
+.dispatch-filters .filter-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-basis: 100%;
+}
+
+.dispatch-filters .result-count {
+  width: auto;
+  margin: 0;
+  color: #686e74;
+  font-size: 12px;
+}
+
+.dispatch-filters .filter-actions .button {
+  min-height: 36px;
+  padding: 8px 12px;
+}
+
+.dispatch-filters .filter-range-error {
+  flex-basis: 100%;
+  margin: 0;
+  color: #9d4300;
+  font-size: 12px;
+}
+
+.dispatch-panel .section-toolbar {
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.dispatch-panel .toolbar-actions {
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+@media (max-width: 1100px) {
+  .dispatch-panel .content-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dispatch-panel .metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .dispatch-filters label.dispatch-filter {
+    flex-basis: calc(50% - 6px);
+  }
+
+  .dispatch-filters label[for="filtro-periodo"] {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  .dispatch-filters label.dispatch-filter {
+    flex-basis: 100%;
+  }
+}
